@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>用 adblock 解决掉网页上隐藏乱码  - Knock Knock World</title>
+<meta name="description" content="这是一个无名小站，记载了一个无名之辈的种种。kkworld.me is a personal blog. It&#39;s all about thoughts, views, game... and other craps.">
+
+<link rel="icon" type="image/x-icon" href="https://kkworld.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://kkworld.github.io/favicon.png">
+
+<link rel="stylesheet" href="https://kkworld.github.io/css/style.css?rnd=1688634091" />
+
+
+
+<meta property="og:title" content="用 adblock 解决掉网页上隐藏乱码" />
+<meta property="og:description" content="我自己一直在龟速自学一些 IT 课程。某编程学习论坛资源超丰富，老师讲课超幽默的。一切都很 ok，学的超开心的。然而，在论坛里做课后作业遇到一个问题，有点不方便，让我有点不爽。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kkworld.github.io/posts/adblock-filters-for-hidden-content/" />
+<meta property="article:published_time" content="2020-05-05T13:29:30+08:00" />
+<meta property="article:modified_time" content="2020-05-05T13:29:30+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="用 adblock 解决掉网页上隐藏乱码"/>
+<meta name="twitter:description" content="我自己一直在龟速自学一些 IT 课程。某编程学习论坛资源超丰富，老师讲课超幽默的。一切都很 ok，学的超开心的。然而，在论坛里做课后作业遇到一个问题，有点不方便，让我有点不爽。"/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="https://kkworld.github.io/">Knock Knock World</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/" title="">首页</a>
+    
+    <a class="" href="/posts/" title="">存档</a>
+    
+    <a class="" href="/tags/" title="">Tags</a>
+    
+    <a class="" href="/about/" title="">关于</a>
+    
+</nav>
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+
+    <article class="post">
+        <header>
+            <h1>用 adblock 解决掉网页上隐藏乱码</h1>
+        </header>
+        <div class="content">
+            <p>我自己一直在龟速自学一些 IT 课程。某编程学习论坛资源超丰富，老师讲课超幽默的。一切都很 ok，学的超开心的。然而，在论坛里做课后作业遇到一个问题，有点不方便，让我有点不爽。</p>
+<p>来龙去脉是这样的。我写作业习惯先把题目复制下来，然后在 typora 里做作业。做完了，再去论坛看答案。结果复制题目的时候，论坛为了防盗，在网页上每行都插入了隐藏的乱码字符。这样，每当我复制一整块的内容，就会把这些隐藏乱码也都复制下来。当然最傻瓜的办法是一行行复制，毕竟我只是做题嘛，繁琐一点也不是不可以。但是最近赶作业，从第一课做到第五课，不断重复 ctrl + c ，ctrl + v，还要操作鼠标精确选择就觉得很累人。刚好自学的课程里也有 HTML 的内容，就想自己试试怎么解决。当作一次解决问题的小练习。</p>
+<p>本来我第一想到的是懒人方法，去找找 chrome 有没有现成的插件。结果看到有个帖子也讨论了这个问题。有人提到说用 adblock plus 就可以解决这个问题。adblock 我一直装着呢，平时的用法都是扔在后台没管它。继续看，发现人家推荐设置一条过滤规则：<code>##font.jammer</code>。我试了之后，并没有解决这个问题。</p>
+<p>不动脑是不行的。看了看人家讨论的那个站是添加了这类语句：</p>
+<p><code>&lt;font class=&quot;jammer&quot;&gt;4 I8 c- ]+ o9 {2 b$ k; I&lt;/font&gt;</code></p>
+<p>而我那个论坛中嵌入的是这样的语句：</p>
+<p><code>&lt;font color=&quot;#ffffff&quot;&gt;KA8cz'4_mT7JN3~txC+XlsduW(H5&lt;/font&gt;</code></p>
+<p>显然这两类不是一种结构，当然不适用。</p>
+<p>还好有人翻译了部分 adblock plus 的官方说明，我这种情况用<strong>属性选择器</strong>就可以解决了，最后我添加的过滤规则是：<code>##font[color=&quot;#ffffff&quot;]</code>。</p>
+<p>Nailed it!</p>
+<p>事情解决后，我终于可以愉快地大段复制了。得到的经验如下：</p>
+<ul>
+<li>许多神工具需要<strong>学习</strong>才能发挥更厉害的功能</li>
+<li>geek 在生活中遇到问题，会<strong>动脑</strong>想怎么解决，用思想的勤奋来弥补身体的懒惰，所以遇到问题多动脑，共勉</li>
+</ul>
+<p>当然，也要尊重版权。</p>
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2020-05-05</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://kkworld.github.io/tags/geek">#geek</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kkworld" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>Copyright © 2019 - 2023 by hw<br>
+</p>
+
+            
+        </footer>
+    </div>
+</body>
+</html>

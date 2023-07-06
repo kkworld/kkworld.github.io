@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geek on Knock Knock World</title>
+    <link>https://kkworld.github.io/tags/geek/</link>
+    <description>Knock Knock World (geek)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 05 May 2020 13:29:30 +0800</lastBuildDate>
+    
+    <atom:link href="https://kkworld.github.io/tags/geek/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用 adblock 解决掉网页上隐藏乱码</title>
+      <link>https://kkworld.github.io/posts/adblock-filters-for-hidden-content/</link>
+      <pubDate>Tue, 05 May 2020 13:29:30 +0800</pubDate>
+      
+      <guid>https://kkworld.github.io/posts/adblock-filters-for-hidden-content/</guid>
+      <description>&lt;p&gt;我自己一直在龟速自学一些 IT 课程。某编程学习论坛资源超丰富，老师讲课超幽默的。一切都很 ok，学的超开心的。然而，在论坛里做课后作业遇到一个问题，有点不方便，让我有点不爽。&lt;/p&gt;
+&lt;p&gt;来龙去脉是这样的。我写作业习惯先把题目复制下来，然后在 typora 里做作业。做完了，再去论坛看答案。结果复制题目的时候，论坛为了防盗，在网页上每行都插入了隐藏的乱码字符。这样，每当我复制一整块的内容，就会把这些隐藏乱码也都复制下来。当然最傻瓜的办法是一行行复制，毕竟我只是做题嘛，繁琐一点也不是不可以。但是最近赶作业，从第一课做到第五课，不断重复 ctrl + c ，ctrl + v，还要操作鼠标精确选择就觉得很累人。刚好自学的课程里也有 HTML 的内容，就想自己试试怎么解决。当作一次解决问题的小练习。&lt;/p&gt;
+&lt;p&gt;本来我第一想到的是懒人方法，去找找 chrome 有没有现成的插件。结果看到有个帖子也讨论了这个问题。有人提到说用 adblock plus 就可以解决这个问题。adblock 我一直装着呢，平时的用法都是扔在后台没管它。继续看，发现人家推荐设置一条过滤规则：&lt;code&gt;##font.jammer&lt;/code&gt;。我试了之后，并没有解决这个问题。&lt;/p&gt;
+&lt;p&gt;不动脑是不行的。看了看人家讨论的那个站是添加了这类语句：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;font class=&amp;quot;jammer&amp;quot;&amp;gt;4 I8 c- ]+ o9 {2 b$ k; I&amp;lt;/font&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;而我那个论坛中嵌入的是这样的语句：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;KA8cz&#39;4_mT7JN3~txC+XlsduW(H5&amp;lt;/font&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;显然这两类不是一种结构，当然不适用。&lt;/p&gt;
+&lt;p&gt;还好有人翻译了部分 adblock plus 的官方说明，我这种情况用&lt;strong&gt;属性选择器&lt;/strong&gt;就可以解决了，最后我添加的过滤规则是：&lt;code&gt;##font[color=&amp;quot;#ffffff&amp;quot;]&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Nailed it!&lt;/p&gt;
+&lt;p&gt;事情解决后，我终于可以愉快地大段复制了。得到的经验如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;许多神工具需要&lt;strong&gt;学习&lt;/strong&gt;才能发挥更厉害的功能&lt;/li&gt;
+&lt;li&gt;geek 在生活中遇到问题，会&lt;strong&gt;动脑&lt;/strong&gt;想怎么解决，用思想的勤奋来弥补身体的懒惰，所以遇到问题多动脑，共勉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然，也要尊重版权。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DELL xps13 9360 安装 win10 / ubuntu（17.10）双系统</title>
+      <link>https://kkworld.github.io/posts/dell-install-ubuntu/</link>
+      <pubDate>Tue, 24 Dec 2019 17:02:15 +0800</pubDate>
+      
+      <guid>https://kkworld.github.io/posts/dell-install-ubuntu/</guid>
+      <description>&lt;p&gt;这是很久以前的一篇旧文，整理出来充数。&lt;/p&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;下载 Ubuntu 17.10，用 rufus 制作启动 U 盘&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Win10 上压缩硬盘，为 Ubuntu 系统流出合适大小的硬盘空间（压缩出 120G 用于 Ubuntu 的安装）
+进入磁盘管理（win + x 或者右键开始图标）- 压缩卷&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Win10 系统关闭“启用快速启动”功能：【控制面板】-【电源选项】- 【选择电源按钮的功能】，关机设置中“启用快速启动”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 - F12 - BIOS setup - system configuration - SATA Operation - AHCI（原本是 RAID On 模式）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插 U 盘 - 重启 - F12 - U 盘启动 - Ubuntu 的安装
+我用了系统提供的与 win 共存的方式安装，自动分区。建议选择手动分区。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 - F12 - BIOS setup - system configuration - SATA Operation - RAID On（改回原模式）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 - F12 - windows boot manager&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;win10:“设置”——&amp;gt;“更新和安全”——&amp;gt;“恢复”——&amp;gt;“高级启动”——&amp;gt;“立即重新启动”——&amp;gt;“疑难解答”——&amp;gt;“高级选项”——&amp;gt;“启动设置”——&amp;gt;“重启”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重复第3步：3. 重启 - F12 - BIOS setup - system configuration - SATA Operation - AHCI（原本是RAID On模式）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 - F12 - windows boot manager - 迅速按F4进入安全模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此后重启进入 Ubuntu 的启动引导界面，但可以选择启动 Windows 或 Ubuntu&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;双系统安装成功&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://kkworld.github.io/posts/hello-world/</link>
+      <pubDate>Thu, 19 Dec 2019 19:38:09 +0800</pubDate>
+      
+      <guid>https://kkworld.github.io/posts/hello-world/</guid>
+      <description>&lt;p&gt;年末了，戏言给自己的圣诞礼物就是这个站点。特意去翻了账单，11 月 22 日我就在 GoDaddy 上挑选好了域名，一直拖延到今天才架起来。&lt;/p&gt;
+&lt;p&gt;这一个月的空当，我都在干嘛？&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;当然是玩啊&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;玩及摸鱼 30%：前半个月在 b 站看克苏鲁游戏视频，玩 EVE，直到 12 月 15 日显卡炸了；&lt;/p&gt;
+&lt;p&gt;处理各种倒霉事 60%：花了周末一个下午检查电脑到底哪个部件坏了，然后又花了几天联系厂家，邮寄显卡去修；EVE 中第一次被人爆了蛋；还有最让人抓狂的是建站中各种踩雷；&lt;/p&gt;
+&lt;p&gt;收集建站素材 10%：写东西变成踩雷中的放松活动。&lt;/p&gt;
+&lt;p&gt;以下就是我建站中踩雷的种种。&lt;/p&gt;
+&lt;h2 id=&#34;挑把顺手的锤子&#34;&gt;挑把顺手的锤子&lt;/h2&gt;
+&lt;p&gt;我是电脑坏了之后想起来建站的。说到建站，我只知道 WordPress。于是 16 日，我去它的官网观察了一下。原来 WordPress 的官网有 .org 和 .com 后缀的区分。（好像很多 Linux 软件组织都这样。）一个免费，一个商业付费，搜了下很多人嫌弃它臃肿。我还去 b 站看了下别人发的“三十分钟建站”教学视频，是用 WordPress 搭配一个“国产服务器博客解决方案”（宝塔？忘记了）。国产服务器自带管理后台，网页上这里按按，那里点点，然后站就架好了，整个过程一点都不 geek。我早就买好了服务器。本来就是因为有服务器，所以才想着要么建个站吧，现在让我换成国产服务器是不可能的。总之看了半天，还是一头雾水没有什么收获。&lt;/p&gt;
+&lt;p&gt;我有那么一点点完美主义强迫症，信奉“磨刀不误砍柴工”。不管文章数目配不配得上工具吧，我就是想要又省事，又能高自定义。在没挑到顺手工具前，工期就拖延了。&lt;/p&gt;
+&lt;p&gt;于是继续闲逛。17 号到 18 号的时候，发现别人用的 Hexo 建的站也很漂亮。进而了解了一下，原来网站分动态静态。WordPress Typecho 属于动态，搭配数据库来动态的查询、调用、展示网页。Typecho 国产开源。我所知的有几位大佬是用的这个。只是最新的稳定版是 17 年，莫非现在凉了？另外动态系统还有一个 Ghost。跟 WordPress 比起来，据说要轻便一些。算是 WordPress 新的有力竞争对手。&lt;/p&gt;
+&lt;p&gt;静态站点没有数据库，通过“静态站点生成器”（static site generator）直接生成纯 html 网页文件来供浏览。优点是生成的小型网站浏览时速度较快，搬家容易。缺点是每次生成的时候都是重新生成，对于大型网站就不适合了。反正对我来说静态就够了。一番搜索之后，常用的静态站点生成器有这么几个选项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jekyll 用的 Ruby，跟 GitHub 关系密切&lt;/li&gt;
+&lt;li&gt;Octopress 基于 Jekyll&lt;/li&gt;
+&lt;li&gt;Hexo 用的 Node.js，是一个台湾人开发的，自带中文说明&lt;/li&gt;
+&lt;li&gt;Hugo 用的 Go，据说速度最快，不少人是从 Hexo 迁移到 Hugo 的&lt;/li&gt;
+&lt;li&gt;Pelican 是使用 Python 编写的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;观察很多人路径是从 Jekyll 到 Hexo 最后迁移到 Hugo。既然如此，我还是一开始就用 Hugo 好了。反正都不懂，干脆就看看 Google 的 Go 编写的 Hugo 到底香不香。&lt;/p&gt;
+&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 Hugo&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应 Win 版本的 zip 包。&lt;/li&gt;
+&lt;li&gt;随意找个地方创建个 hugo 文件夹，并且在这个文件夹下再建两个文件夹：bin 和 sites。bin 作为软件存放地，刚刚下载好的 zip 包就解压到这里。sites 用于存放日后生成的网站。我是将 hugo 放在 D 盘根目录下。&lt;/li&gt;
+&lt;li&gt;添加环境变量（PATH）：在 PowerShell 中，输入 set PATH=%PATH%;D:\hugo\bin&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后我居然没添加成功。不明原因！&lt;/p&gt;
+&lt;p&gt;最后还是通过鼠标点击，去“系统”里搜索环境变量添加好了。官方文档写的真的详细，仅针对 Win 的安装方法，都对新手、老手给出了不同的操作步骤。&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;h3 id=&#34;常用命令&#34;&gt;常用命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 定位到 sites 文件夹下，然后
+hugo new site &amp;lt;SITENAME&amp;gt;
+
+# 添加内容
+hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;
+
+# 生成测试站点（默认生成在 public 文件夹下）
+hugo
+
+# 部署一个本地服务器，可用于上线前的测试，如果要显示草稿，记得加上 -D
+hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注意每次 &lt;code&gt;hugo&lt;/code&gt; 生成站点之前，需要手动删除 public 文件夹下的文件，不然可能会出错。最好是把开发环境和生产环境分开，使用不同的文件夹存放测试。（这是官方说的，有啥错误，我还不知道啊）&lt;/p&gt;
+&lt;h3 id=&#34;主题&#34;&gt;主题&lt;/h3&gt;
+&lt;p&gt;接下来是挑主题。&lt;/p&gt;
+&lt;p&gt;选用呼声比较高的 Even 吧。&lt;code&gt;git clone&lt;/code&gt;或者（更建议）使用&lt;code&gt;git submodule add&lt;/code&gt;之后，把主题 exampleSite 目录下的 config.toml 复制到刚建好的站点下，覆盖同名文件。&lt;/p&gt;
+&lt;p&gt;修改相应内容。先改改站点名字、分类什么的，其他的以后再设置吧。&lt;/p&gt;
+&lt;p&gt;站点根目录下的文件优先级大于主题中的文件。配置时，建议修改站点目录下的文件。主题中的内容不要调整，主要考虑原作者更新版本时，本地同步方便维护。&lt;/p&gt;
+&lt;h3 id=&#34;制作图标&#34;&gt;制作图标&lt;/h3&gt;
+&lt;p&gt;图片版权动不动就出个大新闻。为了避免麻烦（一劳永逸），找了很多年前自己随手画的小黑脸表情图做成图标。这样总没问题了吧。自己画的就是萌，越看越可爱。&lt;/p&gt;
+&lt;p&gt;直到目前为止，都还算顺利，接下来就是雷区了。&lt;/p&gt;
+&lt;h3 id=&#34;上线&#34;&gt;上线&lt;/h3&gt;
+&lt;p&gt;19 号 20 号的时候，我总算进行到部署这个步骤了。本来在前几天学习的时候，就发现部署这部分我完全不明白。都以先选主题，先做图标，先准备内容忽悠过去了。一切都准备好，到了部署这里，避不开了。&lt;/p&gt;
+&lt;p&gt;官方给出了几种部署方法。一般都是部署到 GitHub 上，对我不适用。另外官方推荐使用 rsync 部署到 VPS，步骤大概是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;服务器和客户端均安装好 rsync&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用这条语句进行部署（上传 public 内的文件至 VPS）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;hugo &amp;amp;&amp;amp; rsync -avz --delete public/ www-data@ftp.topologix.fr:~/www/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后我就卡住了。卡在了 win 安装 rsync 上。去下载了专为 win 设计的 cwRsync 免费版，结果不能用。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;我要开始绕路了.jpg&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;内心 MMP，都到这一步了，总不能放弃吧。&lt;/p&gt;
+&lt;p&gt;先研究服务器端好不好？粗略了解了下 LAMP 和 LNMP 方案，决定试用 Nginx 进行部署。在 VPS 上安装好 Nginx 之后，无法运行，我也没深究为什么无法运行。&lt;/p&gt;
+&lt;p&gt;连续几个晚上回家都没有休息，一直在捣鼓建站，智商已经清零。这时候遇到挫折就开始动摇是不是一开始就选择错误，不应该用静态站点，Typecho 也挺好啊。有后台我就可以不用上传了啊。直接网页上发布文章，随便什么电脑都能发布，多好。&lt;/p&gt;
+&lt;p&gt;这就叫行百里者半九十。&lt;/p&gt;
+&lt;p&gt;时间到了 20 号晚上。周五了，放肆了。顺着 Typecho 的安装说明，大半夜我尝试使用 LNMP 一键安装包。结果一装装了一个多小时，中间还被我关掉重新装了一次。按照&lt;a href=&#34;https://lnmp.org/&#34;&gt;某站&lt;/a&gt;的方法设置了一遍。依然无法运行。&lt;/p&gt;
+&lt;p&gt;然后就失眠了。半夜一点多还没睡着。&lt;/p&gt;
+&lt;p&gt;周六白天昏昏沉沉，还好从牛角尖中钻出来，还是回归静态这条路吧。休整一天，补觉看纪录片。晚上按照国外的教学重新设置了 VPS 的用户权限。然后发现原来我是 80 端口被占用了，当然 Nginx 跑不起来。&lt;/p&gt;
+&lt;h3 id=&#34;正确的路径&#34;&gt;正确的路径&lt;/h3&gt;
+&lt;p&gt;直到 24 号平安夜（还真是圣诞礼物了），设置成功，主要依靠这几篇：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://kbudaj.com/2018/11/how-to-setup-hugo-on-vps/#run-local-development-server&#34;&gt;How To Setup Hugo On VPS&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里遇到的坑是服务器上配置的编写。按照这个教程 &lt;code&gt;scp -r public droplet:~/blog&lt;/code&gt; 实际上是把 public 整个传到了服务器。所以在 Nginx 配置中，路径应该是多一层 public 文件夹的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;证书设置还得靠“Let&amp;rsquo;s Encrypt”官方推荐的教程 &lt;a href=&#34;https://certbot.eff.org/&#34;&gt;certbot&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里遇到一个问题，还好我机智地解决了。没有卡很久。&lt;/p&gt;
+&lt;p&gt;在按照 certbot 设置好之后，服务器上提示一切正常，但实际网页就是打不开，提示说“重定向的次数过多”。&lt;/p&gt;
+&lt;p&gt;这个时候千万不要慌。&lt;/p&gt;
+&lt;p&gt;去 CloudFlare 确认下 SSL/TLS encryption mode 勾选 Full 模式，也就是“Encrypts end-to-end, using a self signed certificate on the server”就 OK 了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;教训一：&lt;/strong&gt; 教程一类的，尽量用英文关键词查英文资料。中文毕竟属于小圈子。大多数的中文内容都像是程序员写给自己看的笔记。外行人看了简直令人头秃。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;教训二：&lt;/strong&gt; 跟着教程走，一些无关紧要的命名尽量跟着教程来，比如文件夹的名称什么的。如果自己设置的话，就要特别当心，一不小心某一步骤就忘记改成自己的名称了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;教训三：&lt;/strong&gt; 遇到问题别死磕，多请教别人！这点最重要。&lt;/p&gt;
+&lt;h3 id=&#34;还有很重要的评论系统&#34;&gt;还有很重要的评论系统&lt;/h3&gt;
+&lt;p&gt;静态站点评论系统是令我不太满意的。大多数人选用 disqus，墙内看不到评不了。再者有牛人编写的开源 isso，评论存在本地。&lt;/p&gt;
+&lt;p&gt;折腾到这里已经折腾不动了，暂时先用现成的 disqus 吧。以后再上 isso 或者其他。&lt;/p&gt;
+&lt;h2 id=&#34;更多的废话&#34;&gt;更多的废话&lt;/h2&gt;
+&lt;p&gt;为了建这个小破站，我看了一大堆的个人站点。发现原来有那么多那么多人都建好了自己的站，人手一个热闹的跟菜市场一样。虽然大部分人一年只写不到十篇，且多是 IT 技术文章。无聊内容占大多数，估计也没啥流量，但也发现了不少有趣的小品站点。也看到有些人跟我一样，不是“搞技术的”。比如有个在云南开旅店的掌柜自建的个人站点，平时晒晒旅行风景，也算是见识了不同的人生。&lt;/p&gt;
+&lt;p&gt;调试主题，搞测试非常的折腾。于是就有了第一个类别“折腾”。中途我也无数次怀疑智商，甚至回忆起了小时候题目做不出，人家 5 分钟就做出来的那种恐惧。不想前功尽弃，对自己的愤怒让我坚持下去。总之，这个站就这么建起来了。&lt;/p&gt;
+&lt;p&gt;可喜可贺，可喜可贺。&lt;/p&gt;
+&lt;p&gt;终于又可以愉快地摸鱼了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

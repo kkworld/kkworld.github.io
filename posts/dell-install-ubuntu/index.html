@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>DELL xps13 9360 安装 win10 / ubuntu（17.10）双系统  - Knock Knock World</title>
+<meta name="description" content="这是一个无名小站，记载了一个无名之辈的种种。kkworld.me is a personal blog. It&#39;s all about thoughts, views, game... and other craps.">
+
+<link rel="icon" type="image/x-icon" href="https://kkworld.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://kkworld.github.io/favicon.png">
+
+<link rel="stylesheet" href="https://kkworld.github.io/css/style.css?rnd=1688634091" />
+
+
+
+<meta property="og:title" content="DELL xps13 9360 安装 win10 / ubuntu（17.10）双系统" />
+<meta property="og:description" content="毕竟是付了费的正版 windows 系统，直接格掉太可惜了。所以整个双系统吧。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kkworld.github.io/posts/dell-install-ubuntu/" />
+<meta property="article:published_time" content="2019-12-24T17:02:15+08:00" />
+<meta property="article:modified_time" content="2019-12-24T17:02:15+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DELL xps13 9360 安装 win10 / ubuntu（17.10）双系统"/>
+<meta name="twitter:description" content="毕竟是付了费的正版 windows 系统，直接格掉太可惜了。所以整个双系统吧。"/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="https://kkworld.github.io/">Knock Knock World</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="/" title="">首页</a>
+    
+    <a class="" href="/posts/" title="">存档</a>
+    
+    <a class="" href="/tags/" title="">Tags</a>
+    
+    <a class="" href="/about/" title="">关于</a>
+    
+</nav>
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+
+    <article class="post">
+        <header>
+            <h1>DELL xps13 9360 安装 win10 / ubuntu（17.10）双系统</h1>
+        </header>
+        <div class="content">
+            <p>这是很久以前的一篇旧文，整理出来充数。</p>
+<ol start="0">
+<li>
+<p>下载 Ubuntu 17.10，用 rufus 制作启动 U 盘</p>
+</li>
+<li>
+<p>Win10 上压缩硬盘，为 Ubuntu 系统流出合适大小的硬盘空间（压缩出 120G 用于 Ubuntu 的安装）
+进入磁盘管理（win + x 或者右键开始图标）- 压缩卷</p>
+</li>
+<li>
+<p>Win10 系统关闭“启用快速启动”功能：【控制面板】-【电源选项】- 【选择电源按钮的功能】，关机设置中“启用快速启动”</p>
+</li>
+<li>
+<p>重启 - F12 - BIOS setup - system configuration - SATA Operation - AHCI（原本是 RAID On 模式）</p>
+</li>
+<li>
+<p>插 U 盘 - 重启 - F12 - U 盘启动 - Ubuntu 的安装
+我用了系统提供的与 win 共存的方式安装，自动分区。建议选择手动分区。</p>
+</li>
+<li>
+<p>重启 - F12 - BIOS setup - system configuration - SATA Operation - RAID On（改回原模式）</p>
+</li>
+<li>
+<p>重启 - F12 - windows boot manager</p>
+</li>
+<li>
+<p>win10:“设置”——&gt;“更新和安全”——&gt;“恢复”——&gt;“高级启动”——&gt;“立即重新启动”——&gt;“疑难解答”——&gt;“高级选项”——&gt;“启动设置”——&gt;“重启”</p>
+</li>
+<li>
+<p>重复第3步：3. 重启 - F12 - BIOS setup - system configuration - SATA Operation - AHCI（原本是RAID On模式）</p>
+</li>
+<li>
+<p>重启 - F12 - windows boot manager - 迅速按F4进入安全模式</p>
+</li>
+<li>
+<p>此后重启进入 Ubuntu 的启动引导界面，但可以选择启动 Windows 或 Ubuntu</p>
+</li>
+</ol>
+<p>双系统安装成功</p>
+        </div>
+        <div class="article-info">
+    
+        <div class="article-date">2019-12-24</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://kkworld.github.io/tags/geek">#geek</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kkworld" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>Copyright © 2019 - 2023 by hw<br>
+</p>
+
+            
+        </footer>
+    </div>
+</body>
+</html>
